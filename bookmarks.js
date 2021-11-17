@@ -18,6 +18,7 @@ const bookmarks = [
       { name: "drive", url: "https://drive.google.com/drive/my-drive" },
       {name:  "reddit", url: "https://www.reddit.com/",},
       {name:  "twitch", url: "https://www.twitch.tv/",},
+	  {name:  "github", url: "https://github.com/",},
       {name:  "monkeytype", url: "https://monkeytype.com/",},
       {name: "isDown", url: "https://www.isitdownrightnow.com/",},
     ],
