@@ -1,9 +1,9 @@
 
 :root {
-  --bg: #5f4b8b;
+  --bg: #282828;
   --fg: #ffffff;
   --secondaryFg: #b3b3b3;
-  --containerBg: #272727;
+  --containerBg: #240090;
   --searchBg: var(--containerBg);
   --scrollbarColor: #3f3f3f;
   --fontFamily: 'Roboto Mono', monospace;
