@@ -26,4 +26,15 @@ const bookmarks = [
       { name: "isDown", url: "https://www.isitdownrightnow.com/",},
     ],
   },
+  {
+    title: "rpi server",
+    links: [
+      { name: "portainer", url: "http://192.168.1.115:9000/" },
+      { name: "filebrowser", url: "http://192.168.1.115:8081/" },
+      { name: "netdata", url: "http://192.168.1.115:19999/" },
+      { name: "librespeed", url: "http://192.168.1.115:8013/",},
+      { name: "emby", url: "http://192.168.1.115:8096/",},
+	    { name: "grocy", url: "http://192.168.1.115:8001/",},
+    ],
+  },
 ];
