@@ -7,9 +7,6 @@ const bookmarks = [
       { name: "outlook", url: "https://outlook.office365.com/mail/inbox" },
       { name: "utrgv", url:"https://www.utrgv.edu/en-us/"},
       { name: "OneDrive", url: "https://utrgv-my.sharepoint.com/personal/alfonso_barrera03_utrgv_edu/"},
-      { name: "Tomai", url:"https://faculty.utrgv.edu/emmett.tomai/courses/3342/"},
-      { name: "Schweller", url: "https://faculty.utrgv.edu/robert.schweller/"},
-      { name: "Abraham", url:"https://faculty.utrgv.edu/john.abraham/"},
     ],
   },
   {
