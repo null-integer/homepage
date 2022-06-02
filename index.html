@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
   </head>
+
   <body>
+    
     <div id="search">
       <input
         id="search-field"
@@ -18,6 +21,7 @@
         onkeypress="return search(event)"
       />
     </div>
+
     <div class="container">
       <div id="clock"></div>
       <div class="weather-container">
@@ -31,9 +35,12 @@
     </div>
 
     <script src="bookmarks.js"></script>
+
     <script>
+
       //const searchUrl = "https://google.com/search?q=";
       const searchUrl = "https://duckduckgo.com/?t=ffab&q=";
+
       // Search on enter key event
       function search(e) {
         if (e.keyCode == 13) {
@@ -42,22 +49,23 @@
           window.open(searchUrl + val);
         }
       }
+
       // Get current time and format
       function getTime() {
         let date = new Date(),
           min = date.getMinutes(),
-          sec = date.getSeconds(),
           hour = date.getHours();
+
+          hour = hour > 12 ? hour-12 : hour;
 
         return (
           "" +
           (hour < 10 ? "0" + hour : hour) +
           ":" +
-          (min < 10 ? "0" + min : min) +
-          ":" +
-          (sec < 10 ? "0" + sec : sec)
+          (min < 10 ? "0" + min : min)
         );
       }
+
       // Handle Weather request
       function getWeather() {
         let xhr = new XMLHttpRequest();
@@ -81,6 +89,7 @@
         };
         xhr.send();
       }
+
       // Handle writing out Bookmarks
       function setupBookmarks() {
         const bookmarkContainer = document.getElementById("bookmark-container");
