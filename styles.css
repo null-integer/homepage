@@ -138,7 +138,7 @@ body {
   color: var(--fg);
   margin: 0em 0em 0.35em 0em;
 }
-.bookmark {
+.bookmark{
   text-decoration: none;
   color: var(--secondaryFg);
   display: block;
