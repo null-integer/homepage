@@ -97,7 +97,7 @@
         serverBookmarks.outerHTML = `<div class=\"bookmark-title\"><del>${serverBookmarks.innerHTML}</del></div>`
         serverBookmarks = Array.from(document.getElementsByClassName("bookmark-set")[2].lastChild.children);
         serverBookmarks.map(b => {
-          b.outerHTML = `<h6 class=\"bookmark\"><del>${b.innerHTML}</del></h6>`;
+          b.outerHTML = `<h4 class=\"bookmark\"><del>${b.innerHTML}</del></h4>`;
         }); 
 
         let xhr = new XMLHttpRequest();
