@@ -20,6 +20,7 @@ const bookmarks = [
 	    { name: "github", url: "https://github.com/",},
 	    { name: "thingiverse", url: "https://www.thingiverse.com/"},
       { name: "monkeytype", url: "https://monkeytype.com/",},
+      { name: "octoprint", url: "http://192.168.1.163:5000/",},
       { name: "isDown", url: "https://www.isitdownrightnow.com/",},
     ],
   },
