@@ -4,9 +4,10 @@ const bookmarks = [
     title: "school",
     links: [
       { name: "blackboard", url: "https://mycourses.utrgv.edu/" },
+      { name: "wylie", url: "https://academic.timwylie.com/22CSCI4325F/CSCI4325.html"},
       { name: "outlook", url: "https://outlook.office365.com/mail/inbox" },
       { name: "utrgv", url:"https://www.utrgv.edu/en-us/"},
-      { name: "OneDrive", url: "https://utrgv-my.sharepoint.com/personal/alfonso_barrera03_utrgv_edu/"},
+      { name: "oneDrive", url: "https://utrgv-my.sharepoint.com/personal/alfonso_barrera03_utrgv_edu/"},
     ],
   },
   {
