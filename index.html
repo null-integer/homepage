@@ -21,6 +21,15 @@
       />
     </div>
 
+    <div id="bookmarkSearch">
+      <input
+        id="bookmark-search-field"
+        type="text"
+        name="bookmark-search-field"
+        onkeypress="return bookmarkSearch(event)"
+      />
+    </div>
+
     <div class="container">
       <div id="clock"></div>
       <div class="weather-container">
@@ -46,6 +55,23 @@
           var val = document.getElementById("search-field").value;
           val = val.replace(/ /gi, "+")
           window.open(searchUrl + val);
+        }
+      }
+
+      function bookmarkSearch(e){
+        if (e.keyCode == 13){
+          var val = document.getElementById("bookmark-search-field").value;
+          //console.log(val);
+          bookmarks.forEach( x => {
+	          x.links.forEach( y => {
+		          if(y.name == val){
+			          //console.log(y.url);
+                //let bookmarkUrl = y.url;
+                window.open(y.url);
+
+              }
+            })
+          });
         }
       }
 
@@ -164,7 +190,15 @@
           document.getElementById("search-field").value = "";
           document.getElementById("search-field").blur();
           document.getElementById("search").style.display = "none";
+
+          document.getElementById("bookmark-search-field").value = "";
+          document.getElementById("bookmark-search-field").blur();
+          document.getElementById("bookmarkSearch").style.display = "none";
         }
+        else if (event.keyCode == 17 || event.keyCode == 39){
+          //ctrl code to open bookmark search
+          document.getElementById("bookmarkSearch").style.display = "flex";
+          document.getElementById("bookmark-search-field").focus();        }
       });
     </script>
   </body>
