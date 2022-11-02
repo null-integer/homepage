@@ -9,7 +9,7 @@ const bookmarks = [
       { name: "jira", url: "https://keviny.atlassian.net/jira/projects?selectedProjectType=software"},
       { name: "figma", url: "https://www.figma.com/files/"},
       { name: "utrgv", url:"https://www.utrgv.edu/en-us/"},
-      { name: "oneDrive", url: "https://utrgv-my.sharepoint.com/personal/alfonso_barrera03_utrgv_edu/"},
+      { name: "onedrive", url: "https://utrgv-my.sharepoint.com/personal/alfonso_barrera03_utrgv_edu/"},
     ],
   },
   {
@@ -31,6 +31,10 @@ const bookmarks = [
     title: "rpi server",
     links: [
       { name: "filebrowser", url: "http://192.168.1.115:8081/" },
+      { name: "pulse check", url: "http://192.168.1.115:3001/" },
+      { name: "recipes", url: "http://192.168.1.115:3001/recipes" },
+      { name: "bookmarks", url: "http://192.168.1.115:3001/bookmarks" },
+      { name: "quick access", url: "http://192.168.1.115:3001/quickAccess" },
     ],
   },
 ];
