@@ -54,6 +54,9 @@
         if (e.keyCode == 13) {
           var val = document.getElementById("search-field").value;
           val = val.replace(/ /gi, "+")
+          document.getElementById("search-field").value = "";
+          document.getElementById("search-field").blur();
+          document.getElementById("search").style.display = "none";
           window.open(searchUrl + val);
         }
       }
@@ -67,8 +70,10 @@
 		          if(y.name == val){
 			          //console.log(y.url);
                 //let bookmarkUrl = y.url;
+                document.getElementById("bookmark-search-field").value = "";
+                document.getElementById("bookmark-search-field").blur();
+                document.getElementById("bookmarkSearch").style.display = "none";
                 window.open(y.url);
-
               }
             })
           });
@@ -198,7 +203,8 @@
         else if (event.keyCode == 17 || event.keyCode == 39){
           //ctrl code to open bookmark search
           document.getElementById("bookmarkSearch").style.display = "flex";
-          document.getElementById("bookmark-search-field").focus();        }
+          document.getElementById("bookmark-search-field").focus();        
+        }
       });
     </script>
   </body>
