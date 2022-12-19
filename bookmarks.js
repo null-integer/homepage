@@ -4,7 +4,6 @@ const bookmarks = [
     title: "school",
     links: [
       { name: "blackboard", url: "https://mycourses.utrgv.edu/" },
-      { name: "wylie", url: "https://academic.timwylie.com/22CSCI4325F/CSCI4325.html"},
       { name: "outlook", url: "https://outlook.office365.com/mail/inbox" },
       { name: "jira", url: "https://keviny.atlassian.net/jira/projects?selectedProjectType=software"},
       { name: "figma", url: "https://www.figma.com/files/"},
@@ -30,11 +29,10 @@ const bookmarks = [
   {
     title: "rpi server",
     links: [
-      { name: "filebrowser", url: "http://192.168.1.115:8081/" },
-      { name: "pulse check", url: "http://192.168.1.115:3001/" },
-      { name: "recipes", url: "http://192.168.1.115:3001/recipes" },
-      { name: "bookmarks", url: "http://192.168.1.115:3001/bookmarks" },
-      { name: "quick access", url: "http://192.168.1.115:3001/quickAccess" },
+      { name: "pulse check", url: "http://192.168.1.163:3001/" },
+      { name: "recipes", url: "http://192.168.1.163:3001/recipes" },
+      { name: "bookmarks", url: "http://192.168.1.163:3001/bookmarks" },
+      { name: "quick access", url: "http://192.168.1.163:3001/quickAccess" },
     ],
   },
 ];
