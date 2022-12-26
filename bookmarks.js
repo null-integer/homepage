@@ -1,0 +1,37 @@
+const bookmarks = [
+  {
+    title: "school",
+    links: [
+      { name: "blackboard", url: "https://mycourses.utrgv.edu/" },
+      { name: "outlook", url: "https://outlook.office365.com/mail/inbox" },
+      { name: "jira", url: "https://keviny.atlassian.net/jira/projects?selectedProjectType=software"},
+      { name: "figma", url: "https://www.figma.com/files/"},
+      { name: "utrgv", url:"https://www.utrgv.edu/en-us/"},
+      { name: "onedrive", url: "https://utrgv-my.sharepoint.com/personal/alfonso_barrera03_utrgv_edu/"},
+    ],
+  },
+  {
+    title: "my stuff",
+    links: [
+      { name: "youtube", url: "https://youtube.com" },
+      { name: "gmail", url: "https://mail.google.com/mail/u/0/#inbox" },
+      { name: "drive", url: "https://drive.google.com/drive/my-drive" },
+      { name: "reddit", url: "https://www.reddit.com/",},
+      { name: "twitch", url: "https://www.twitch.tv/",},
+	    { name: "github", url: "https://github.com/",},
+	    { name: "thingiverse", url: "https://www.thingiverse.com/"},
+      { name: "monkeytype", url: "https://monkeytype.com/",},
+      { name: "isDown", url: "https://www.isitdownrightnow.com/",},
+    ],
+  },
+  {
+    title: "rpi server",
+    links: [
+      { name: "pulse check", url: "http://192.168.1.163:3001/" },
+      { name: "recipes", url: "http://192.168.1.163:3001/recipes" },
+      { name: "bookmarks", url: "http://192.168.1.163:3001/bookmarks" },
+      { name: "quick access", url: "http://192.168.1.163:3001/quickAccess" },
+      { name: "directory", url: "http://192.168.1.163:3001/directory" },
+    ],
+  },
+];
