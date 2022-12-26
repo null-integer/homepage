@@ -12,6 +12,7 @@
 
   <body>
     
+    <!-- internet search div -->
     <div id="search">
       <input
         id="search-field"
@@ -21,6 +22,7 @@
       />
     </div>
 
+    <!-- bookmark search div -->
     <div id="bookmarkSearch">
       <input
         id="bookmark-search-field"
@@ -30,6 +32,7 @@
       />
     </div>
 
+    <!-- clock div -->
     <div class="container">
       <div id="clock"></div>
       <div class="weather-container">
@@ -42,6 +45,7 @@
       <div id="bookmark-container"></div>
     </div>
 
+    <!-- importing bookmark array and ip string -->
     <script src="bookmarks.js"></script>
 
     <script>
@@ -135,7 +139,7 @@
 
         xhr.open(
           "GET",
-          "http://192.168.1.163:3001/"
+          serverIpUrl
         );
 
         xhr.onload = () => {
