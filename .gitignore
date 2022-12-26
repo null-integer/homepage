@@ -1,0 +1,3 @@
+#ignore bookmark files
+#const bookmarks = [{title:"", links:[{name:"",url:""},{},{}]},{},{}]
+bookmarks.js
