@@ -88,7 +88,7 @@ const weatherAPI = "http://weather-api-url.com/"
 
 ***Command Mode***
 
-Press the \ key to run a <a href="commands">command</a>
+Press the \ key to run a <a href="#commands">command</a>
 
 ***Web Search***
 
