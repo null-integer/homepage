@@ -12,10 +12,9 @@
 
   <body>
 
-    FINISH COMMAND MODE
-    OPTIMIZE THE SERVER BOOKMARK    
     <!-- internet search div -->
     <div id="search">
+      <h2>Search Mode</h2>
       <input
         id="search-field"
         type="text"
@@ -26,6 +25,7 @@
 
     <!-- bookmark search div -->
     <div id="bookmarkSearch">
+      <h2>Bookmark Mode</h2>
       <input
         id="bookmark-search-field"
         type="text"
@@ -36,6 +36,7 @@
 
     <!-- Command Mode div -->
     <div id="commandMode">
+      <h2>Command Mode</h2>
       <input
         id="command-mode-field"
         type="text"
@@ -60,10 +61,13 @@
     <!-- importing bookmark array and ip string -->
     <script src="bookmarks.js"></script>
 
+    <!-- importing the commands -->
+    <script src="commands.js"></script>
+
     <script>
 
-      //const searchUrl = "https://google.com/search?q=";
-      const searchUrl = "https://duckduckgo.com/?t=ffab&q=";
+      let searchUrl = "https://duckduckgo.com/?t=ffab&q=";
+      let inMode = false;
 
       // Search on enter key event
       function search(e) {
@@ -74,22 +78,22 @@
           document.getElementById("search-field").value = "";
           document.getElementById("search-field").blur();
           document.getElementById("search").style.display = "none";
+          inMode = false;
           window.open(searchUrl + val);
         }
       }
 
+      //open bookmark on enter key
       function bookmarkSearch(e){
         if (e.keyCode == 13){
           var val = document.getElementById("bookmark-search-field").value;
-          //console.log(val);
           bookmarks.forEach( x => {
 	          x.links.forEach( y => {
 		          if(y.name == val){
-			          //console.log(y.url);
-                //let bookmarkUrl = y.url;
                 document.getElementById("bookmark-search-field").value = "";
                 document.getElementById("bookmark-search-field").blur();
                 document.getElementById("bookmarkSearch").style.display = "none";
+                inMode = false;
                 window.open(y.url);
               }
             })
@@ -97,9 +101,12 @@
         }
       }
 
+      //run command on enter key
       function commandMode(e){
         if (e.keyCode == 13){
           var val = document.getElementById("command-mode-field").value;
+          inMode = false;
+          runCommand(val);
         }
       }
 
@@ -125,7 +132,7 @@
         // Request to open weather map
         xhr.open(
           "GET",
-          "http://api.openweathermap.org/data/2.5/weather?id=4737316&units=imperial&appid=e5b292ae2f9dae5f29e11499c2d82ece"
+          weatherAPI
         );
         xhr.onload = () => {
           if (xhr.readyState === 4) {
@@ -197,8 +204,10 @@
       }
 
       window.onload = () => {
+        //first set the bookmarks
         setupBookmarks();
         getWeather();
+        //then check if the server bookmarks respond
         serverStatus();
         // Set up the clock
         document.getElementById("clock").innerHTML = getTime();
@@ -209,10 +218,11 @@
       };
 
       document.addEventListener("keyup", (event) => {
-        if (event.keyCode == 32) {
+        if (event.keyCode == 32 && !inMode) {
           // Spacebar code to open search
           document.getElementById("search").style.display = "flex";
           document.getElementById("search-field").focus();
+          inMode = true;
         } else if (event.keyCode == 27) {
           // Esc to close search
           document.getElementById("search-field").value = "";
@@ -226,17 +236,20 @@
           document.getElementById("command-mode-field").value = "";
           document.getElementById("command-mode-field").blur();
           document.getElementById("commandMode").style.display = "none";
+
+          inMode = false;
         }
-        else if (event.keyCode == 17 || event.keyCode == 39){
+        else if (event.keyCode == 17 || event.keyCode == 39 && !inMode){
           //ctrl code to open bookmark search
           document.getElementById("bookmarkSearch").style.display = "flex";
-          document.getElementById("bookmark-search-field").focus();        
+          document.getElementById("bookmark-search-field").focus(); 
+          inMode = true;
         }
-        else if (event.keyCode == 220){
+        else if (event.keyCode == 220 && !inMode){
           //forward slash code to open command mode
           document.getElementById("commandMode").style.display = "flex";
           document.getElementById("command-mode-field").focus();
-          document.getElementById("command-mode-field").value = "\\";
+          inMode = true;
         }
       });
     </script>
