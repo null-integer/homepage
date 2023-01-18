@@ -115,7 +115,7 @@ I based this on <a href="https://github.com/Jaredk3nt/homepage">Jaredk3nt's orig
 
 ## Related
 
-[Homepage Mobile](https://github.com/) - The mobile version of this repo
+[Homepage Mobile](https://github.com/null-integer/homepage-mobile) - The mobile version of this repo
 
 ## License
 
