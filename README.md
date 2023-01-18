@@ -32,7 +32,7 @@
 
 1. Clone or download the repo
 2. Add a `bookmarks.js` file
-3. <a href="bookmarks-structure">Populate</a> the file with your bookmark data
+3. <a href="#bookmarks-structure">Populate</a> the file with your bookmark data
 4. Set `index.html` to be your browser's homepage
 
 ## Bookmarks Structure
