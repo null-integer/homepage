@@ -69,7 +69,7 @@ const bookmarks = [
             {name: "bookmark 4", url: "https://bookmarkURL4.com/"},
         ]
     },
-]
+];
 ```
 
 You also need other constant variables: 
@@ -81,7 +81,7 @@ const serverIpUrl = "http://local-server-url/";
 const serverIndex = 2;
 
 //Weather API url
-const weatherAPI = "http://weather-api-url.com/"
+const weatherAPI = "http://weather-api-url.com/";
 ```
 
 ## Modes
