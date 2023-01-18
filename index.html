@@ -11,7 +11,9 @@
   </head>
 
   <body>
-    
+
+    FINISH COMMAND MODE
+    OPTIMIZE THE SERVER BOOKMARK    
     <!-- internet search div -->
     <div id="search">
       <input
@@ -29,6 +31,16 @@
         type="text"
         name="bookmark-search-field"
         onkeypress="return bookmarkSearch(event)"
+      />
+    </div>
+
+    <!-- Command Mode div -->
+    <div id="commandMode">
+      <input
+        id="command-mode-field"
+        type="text"
+        name="command-mode-field"
+        onkeypress="return commandMode(event)"
       />
     </div>
 
@@ -55,6 +67,7 @@
 
       // Search on enter key event
       function search(e) {
+        //when enter key is pressed
         if (e.keyCode == 13) {
           var val = document.getElementById("search-field").value;
           val = val.replace(/ /gi, "+")
@@ -81,6 +94,12 @@
               }
             })
           });
+        }
+      }
+
+      function commandMode(e){
+        if (e.keyCode == 13){
+          var val = document.getElementById("command-mode-field").value;
         }
       }
 
@@ -128,9 +147,9 @@
       function serverStatus() {
 
         //console.log("server was called");
-        let serverBookmarks = document.getElementsByClassName("bookmark-set")[2].firstChild;
+        let serverBookmarks = document.getElementsByClassName("bookmark-set")[serverIndex].firstChild;
         serverBookmarks.outerHTML = `<div class=\"bookmark-title\"><del>${serverBookmarks.innerHTML}</del></div>`
-        serverBookmarks = Array.from(document.getElementsByClassName("bookmark-set")[2].lastChild.children);
+        serverBookmarks = Array.from(document.getElementsByClassName("bookmark-set")[serverIndex].lastChild.children);
         serverBookmarks.map(b => {
           b.outerHTML = `<h4 class=\"bookmark\"><del>${b.innerHTML}</del></h4>`;
         }); 
@@ -203,11 +222,21 @@
           document.getElementById("bookmark-search-field").value = "";
           document.getElementById("bookmark-search-field").blur();
           document.getElementById("bookmarkSearch").style.display = "none";
+
+          document.getElementById("command-mode-field").value = "";
+          document.getElementById("command-mode-field").blur();
+          document.getElementById("commandMode").style.display = "none";
         }
         else if (event.keyCode == 17 || event.keyCode == 39){
           //ctrl code to open bookmark search
           document.getElementById("bookmarkSearch").style.display = "flex";
           document.getElementById("bookmark-search-field").focus();        
+        }
+        else if (event.keyCode == 220){
+          //forward slash code to open command mode
+          document.getElementById("commandMode").style.display = "flex";
+          document.getElementById("command-mode-field").focus();
+          document.getElementById("command-mode-field").value = "\\";
         }
       });
     </script>
