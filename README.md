@@ -105,6 +105,8 @@ Press the CTRL key to go to your bookmark url based on its name
 
 Change the main color of the homepage (hex or name)
 
+![demo](demo.gif)
+
 `engine [engine]`
 
 Change the search engine used (google or duck)
